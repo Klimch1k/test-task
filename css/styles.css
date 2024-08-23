@@ -1,0 +1,138 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+
+  background-color: tomato;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ХЕЛПЕРЫ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/* Размеры */
+.large-size {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.medium-size {
+  width: 485px;
+}
+
+/* Цвета */
+
+ .darkcyan {
+    background-color: darkcyan;
+ }
+
+
+ .cadetblue {
+    background-color: cadetblue;
+ }
+
+
+
+ .slateblue {
+    background-color: slateblue;
+ }
+
+/* Отступы */
+
+.margin-left-30 {
+margin-left: 30px;
+}
+
+/* Блоки и элементы */
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.products-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.product-card {
+  display: block;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+
+
+  background-color: cadetblue;
+  
+}
+
+.product-card__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card__image {
+  display: block;
+  max-width: 100%;
+
+  margin-bottom: 30px;
+}
+
+.product-card__title {
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.product-card__decription {
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
