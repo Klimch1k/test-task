@@ -2,7 +2,6 @@ body {
   font-family: "Roboto", sans-serif;
   color: #000000;
 
-  background-color: tomato;
 }
 
 a {
@@ -25,11 +24,21 @@ p {
 }
 
 .conteiner {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .conteiner {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .conteiner {
+    max-width: 1200px;
+  }
 }
 
 /* ХЕЛПЕРЫ */
@@ -47,65 +56,63 @@ p {
   overflow: hidden;
 }
 
-
 /* Размеры */
 .large-size {
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  flex-basis: 100%;
 }
 
 .medium-size {
-  width: 485px;
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.small-size {
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 /* Цвета */
+.product-card.product-card--bisque {
+  background-color: bisque;
+}
 
- .darkcyan {
-    background-color: darkcyan;
- }
-
-
- .cadetblue {
-    background-color: cadetblue;
- }
-
-
-
- .slateblue {
-    background-color: slateblue;
- }
-
-/* Отступы */
-
-.margin-left-30 {
-margin-left: 30px;
+.product-card.product-card--slateblue {
+  background-color: slateblue;
 }
 
 /* Блоки и элементы */
 
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .products-group {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  flex-wrap: wrap;
 
+  gap: 30px;
+}
 
 .product-card {
   display: block;
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  padding-left: 30px;
-
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 15px;
 
   background-color: cadetblue;
-  
+
+  transition: transform 250ms linear;
+ 
+}
+
+.product-card:hover, .product-card:focus {
+transform: scale(1.05);
 }
 
 .product-card__box {
@@ -118,6 +125,7 @@ margin-left: 30px;
 .product-card__image {
   display: block;
   max-width: 100%;
+  height: auto;
 
   margin-bottom: 30px;
 }
@@ -125,14 +133,14 @@ margin-left: 30px;
 .product-card__title {
   margin-bottom: 30px;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
 
 .product-card__decription {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
